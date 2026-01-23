@@ -1,0 +1,16 @@
+#skip{
+
+    a{
+        position: absolute;
+        left: 0;
+        top: -100px;
+        background-color: var(--black);
+        color: var(--white);
+        padding: 10px 30px;
+
+        // 장애인들 탭키누르면 보이게 하기위해 만드는 것
+        &:focus{  
+            top:10px;
+        }
+    }
+}
