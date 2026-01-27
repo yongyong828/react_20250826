@@ -90,7 +90,8 @@
             display: none;
             width: 40px;
             height: 40px;
-            background-color: lightpink;
+            cursor: pointer;
+            // background-color: lightpink;
 
             @media(max-width:800px){
                 display: block;
