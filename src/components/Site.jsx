@@ -1,10 +1,133 @@
 import React from 'react'
 
+const siteText=[
+    {
+        text:["Make","site compliant with","mbc academy"],
+        title:"웹표준을 준수한 사이트 제작",
+        code:"/",
+        view:"/",
+        infor:["site coding","production period: two days","html5, css3, script"],
+    },
+    {
+        text:["Make","site compliant with","1차 포트폴리오"],
+        title:"1차 포트폴리오 사이트 제작",
+        code:"/",
+        view:"/",
+        infor:["site coding","production period: two days","html5, css3, script"],
+    },
+    {
+        text:["Make","site compliant with","팀프로젝트"],
+        title:"팀프로젝트 사이트 제작",
+        code:"/",
+        view:"/",
+        infor:["site coding","production period: two days","html5, css3, script"],
+    },
+    {
+        text:["Make","site compliant with","2차 포트폴리오"],
+        title:"2차 포트폴리오 사이트 제작",
+        code:"/",
+        view:"/",
+        infor:["site coding","production period: two days","html5, css3, script"],
+    },
+    {
+        text:["Make","site compliant with","리디자인"],
+        title:"리디자인 사이트 제작",
+        code:"/",
+        view:"/",
+        infor:["site coding","production period: two days","html5, css3, script"],
+    },
+]
+
 const Site = () => {
     return (
-        <div>
-            Site
-        </div>
+        <section id='site'>
+            <div className="site_inner">
+                <h2 className='site_title'>
+                    Site coding
+                    <em> 나의 작업물</em>
+                </h2>
+                <section className='site_wrap'>
+                    {siteText.map((site,key)=>(
+
+                        <article className={`site_item s${key+1}`} key={key}>
+                            <span className='num'>{key+1}.</span>
+                            <div className='text'>
+                                <div>{site.text[0]}</div>
+                                <div>{site.text[1]}</div>
+                                <div>{site.text[2]}</div>
+                            </div>
+                            <h3 className='title'>{site.title}</h3>
+                            <div className='btn'>
+                                <a href={site.code}>code</a> 
+                                <a href={site.view}>view</a>
+                            </div>
+                            <div className="infor">
+                                <span>{site.infor[0]}</span>
+                                <span>{site.infor[1]}</span>
+                                <span>{site.infor[2]}</span>
+                            </div>
+                        </article>
+
+                    ))}
+
+
+                    {/* <article className='site_item s2'>
+                        <span className='num'>2.</span>
+                        <div className='text'>
+                            <div>Make</div>
+                            <div>site compliant with</div>
+                            <div>1차 포트폴리오</div>
+                        </div>
+                        <h3 className='title'>1차 포트폴리오 사이트 제작</h3>
+                        <div className='btn'>
+                            <a href="/">code</a>
+                            <a href="/">view</a>
+                        </div>
+                        <div className="infor">
+                            <span>site coding</span>
+                            <span>production period: two days</span>
+                            <span>html5, css3, script</span>
+                        </div>
+                    </article>
+                    <article className='site_item s3'>
+                        <span className='num'>3.</span>
+                        <div className='text'>
+                            <div>Make</div>
+                            <div>site compliant with</div>
+                            <div>팀프로젝트</div>
+                        </div>
+                        <h3 className='title'>팀프로젝트 사이트 제작</h3>
+                        <div className='btn'>
+                            <a href="/">code</a>
+                            <a href="/">view</a>
+                        </div>
+                        <div className="infor">
+                            <span>site coding</span>
+                            <span>production period: two days</span>
+                            <span>html5, css3, script</span>
+                        </div>
+                    </article>
+                    <article className='site_item s4'>
+                        <span className='num'>4.</span>
+                        <div className='text'>
+                            <div>Make</div>
+                            <div>site compliant with</div>
+                            <div>2차 포트폴리오</div>
+                        </div>
+                        <h3 className='title'>2차포트폴리오 사이트 제작</h3>
+                        <div className='btn'>
+                            <a href="/">code</a>
+                            <a href="/">view</a>
+                        </div>
+                        <div className="infor">
+                            <span>site coding</span>
+                            <span>production period: two days</span>
+                            <span>html5, css3, script</span>
+                        </div>
+                    </article> */}
+                </section>
+            </div>
+        </section>
     )
 }
 
